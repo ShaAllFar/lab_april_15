@@ -1,20 +1,24 @@
 function sum(number1,number2){
   var sum = number1 + number2;
-  //console.log('\"The sum of ' + number1 + ' and ' + number2 + ' is ' + sum + '.\"');
+  var returnProb1 = document.getElementById('problem1ID');
+  returnProb1.textContent = '\"The sum of ' + number1 + ' and ' + number2 + ' is ' + sum + '.\"';
   return sum;
 }
 
 function multiply(number1,number2){
   var product = number1 * number2;
-  //console.log('\"The product of ' + number1 + ' and ' + number2 + ' is ' + product + '.\"');
+  returnProb2 = document.getElementById('problem2ID');
+  returnProb2.textContent = '\"The product of ' + number1 + ' and ' + number2 + ' is ' + product + '.\"';
   return product;
 }
 
 function sumAndMultiply(number1,number2,number3){
   var totalSum = sum(sum(number1,number2), number3);
   var totalProduct = multiply(multiply(number1,number2), number3);
-  console.log('\"' + number1 + ' and ' + number2 + ' and ' + number3 + ' sum to ' + totalSum + '.\"');
-  console.log('\"The numbers ' + number1 + ' and ' + number2 + ' and ' + number3 + ' have a product of ' + totalProduct + '.\"');
+  var returnProb2a = document.getElementById('problem3IDa');
+  returnProb2a.textContent = '\"' + number1 + ' and ' + number2 + ' and ' + number3 + ' sum to ' + totalSum + '.\"';
+  var returnProb2b = document.getElementById('problem3IDb');
+  returnProb2b.textContent = '\"The numbers ' + number1 + ' and ' + number2 + ' and ' + number3 + ' have a product of ' + totalProduct + '.\"';
   return [totalSum,totalProduct];
 }
 
@@ -24,9 +28,10 @@ function sumArray(array){
   {
     totalSum += array[i];
   }
-    //"2,3,4 was passed in as an array of numbers, and 9 is their sum."
+
+  var returnProblem4 = document.getElementById('problem4ID');
+  returnProblem4.textContent = '\"' + array + ' was passed in as an array of numbers, and ' + totalSum + ' is their sum.\"';
   console.table(array);
-  console.log('\"' + array + ' was passed in as an array of numbers, and ' + totalSum + ' is their sum.\"');
 }
 
 function multiplyArray(array){
@@ -35,7 +40,8 @@ function multiplyArray(array){
   {
     totalProduct *= array[i];
   }
+
+  var returnProblem5 = document.getElementById('problem5ID');
+  returnProblem5.textContent = '\"The numbers ' + array + ' have a product of ' + totalProduct + '.\"';
   console.table(array);
-  //"The numbers 2,3,4 have a product of 20."
-  console.log('\"The numbers ' + array + ' have a product of ' + totalProduct + '.\"');
 }
