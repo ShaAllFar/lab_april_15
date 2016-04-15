@@ -28,3 +28,14 @@ function sumArray(array){
   console.table(array);
   console.log('\"' + array + ' was passed in as an array of numbers, and ' + totalSum + ' is their sum.\"');
 }
+
+function multiplyArray(array){
+  var totalProduct = 1;
+  for(var i = 0; i < array.length; i++)
+  {
+    totalProduct *= array[i];
+  }
+  console.table(array);
+  //"The numbers 2,3,4 have a product of 20."
+  console.log('\"The numbers ' + array + ' have a product of ' + totalProduct + '.\"');
+}
